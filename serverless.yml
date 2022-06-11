@@ -59,6 +59,13 @@ functions:
           method: GET
           path: /
           cors: true
+  getOrder:
+    handler: src/lambdas/get-order.handler
+    events:
+      - http :
+          method: GET
+          path: /order/get-order/{id}        
+          cors: true
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
